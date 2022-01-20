@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.places {
+  //   margin-top: 45rem;
+  // max-width: 90%;
+  margin: 45rem auto auto auto;
+  padding: 10rem;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba($color-primary-blue, 0.8),
+    rgba($color-primary-blue-2, 0.8)
+  );
+  transform: skew(-5deg, -5deg);
+
+  &__content {
+    padding: 3rem;
+    // border: 1px solid red;
+    transform: skew(5deg, 5deg);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 12rem;
+    background-image: linear-gradient(to left, #fff, #666);
+    background-clip: text;
+    letter-spacing: 3rem;
+    color: transparent;
+    text-align: center;
+    // transform: skew(-10deg, -10deg);
+  }
+
+  &__text {
+    color: $color-white;
+    font-size: 4rem;
+    text-align: center;
+    margin: 10rem auto;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-around;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    // border: solid red;
+    // flex-wrap: wrap;
+  }
+}

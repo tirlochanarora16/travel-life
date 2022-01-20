@@ -1,0 +1,88 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "LOCATION_ID": 1,
+        "NAME": "Svalbard"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.975182, 77.874969]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LOCATION_ID": 2,
+        "NAME": "Madagascar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.869106, -18.766947]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LOCATION_ID": 3,
+        "NAME": "Mauritius"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [57.552151, -20.348404]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LOCATION_ID": 4,
+        "NAME": "Kenya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.4313975, 1.4419683]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LOCATION_ID": 5,
+        "NAME": "Thailand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [100.83273, 14.8971921]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LOCATION_ID": 6,
+        "NAME": "French Guiana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-52.999998, 4.0039882]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "LOCATION_ID": 7,
+        "NAME": "Mayotte"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [45.1520755, -12.823048]
+      }
+    }
+  ]
+}
