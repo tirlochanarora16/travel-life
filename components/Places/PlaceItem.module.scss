@@ -3,28 +3,20 @@
 .place {
   position: relative;
   flex: 1;
-  // overflow: hidden;
-  // border: 1px solid black;
 
   &__img {
-    // width: 100%;
-    // height: 100%;
-    border-radius: 0.5rem;
+    border-radius: 6rem;
+    height: 80rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s;
+    overflow: hidden;
 
     cursor: pointer;
 
     &:not(:last-child) {
       margin-right: 3rem;
-    }
-
-    img {
-      display: block;
-      margin: auto;
-      background-size: cover;
-      float: left;
-      border: 1px solid red;
-      transition: all 0.4s;
-      transform: scale(1.1);
     }
   }
 
@@ -40,9 +32,8 @@
     transition: all 0.4s;
   }
 
-  &:hover img {
-    filter: brightness(50%);
-    transform: scale(1);
+  &:hover &__img {
+    filter: blur(1rem);
   }
 
   &:hover &__text {

@@ -21,19 +21,19 @@ const Places = () => {
           what you want & where you wanna go. We'll make it happen for you !
         </p>
         <div className={styles["places__row"]}>
-          <PlaceItem title="Svalbard" img={svalbardImg} />
-          <PlaceItem title="Artic" img={articImg} />
-          <PlaceItem title="French Guiana" img={frenchGuianaImg} />
+          <PlaceItem title="Svalbard" img={svalbardImg.src} />
+          <PlaceItem title="Artic" img={articImg.src} />
+          <PlaceItem title="French Guiana" img={frenchGuianaImg.src} />
         </div>
         <div className={styles["places__row"]}>
-          <PlaceItem title="Madagascar" img={madagascarImg} />
-          <PlaceItem title="Mauritius" img={mauritiusImg} />
-          <PlaceItem title="Mayotte" img={mayotteImg} />
+          <PlaceItem title="Madagascar" img={madagascarImg.src} />
+          <PlaceItem title="Mauritius" img={mauritiusImg.src} />
+          <PlaceItem title="Mayotte" img={mayotteImg.src} />
         </div>
         <div className={styles["places__row"]}>
-          <PlaceItem title="Senegal" img={senegalImg} />
-          <PlaceItem title="Thailand" img={thailandImg} />
-          <PlaceItem title="someplace else" img={randomImg} />
+          <PlaceItem title="Senegal" img={senegalImg.src} />
+          <PlaceItem title="Thailand" img={thailandImg.src} />
+          <PlaceItem title="someplace else" img={randomImg.src} />
         </div>
         <div className={styles["places__row"]}></div>
       </div>

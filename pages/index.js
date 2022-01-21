@@ -4,6 +4,7 @@ import Head from "next/head";
 import NavigationMenu from "../components/Navigation/Navigation";
 import Header from "../components/Header/Header";
 import Places from "../components/Places/Places";
+import Excrusion from "../components/Excursion/Excrusion";
 
 export default function Home(props) {
   return (
@@ -17,13 +18,13 @@ export default function Home(props) {
       <main>
         <Header mapboxKey={props.mapboxKey} />
         <Places />
+        <Excrusion />
       </main>
     </Fragment>
   );
 }
 
 export async function getStaticProps() {
-  console.log(process.env.MAPBOX_KEY);
   return {
     props: {
       mapboxKey: process.env.MAPBOX_KEY,

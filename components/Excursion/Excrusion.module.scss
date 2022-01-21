@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.excrusion {
+  margin: 35rem auto auto auto;
+  padding: 10rem;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-green-dark, 1),
+    rgba($color-primary-green-light, 1)
+  );
+  transform: skew(-3deg, -3deg);
+
+  &__content {
+    padding: 3rem;
+    transform: skew(3deg, 3deg);
+    &--heading {
+      text-transform: uppercase;
+      font-size: 12rem;
+      background-image: linear-gradient(
+        to left,
+        $color-primary-blue-3,
+        $color-primary-blue-2
+      );
+      background-clip: text;
+      letter-spacing: 3rem;
+      color: transparent;
+      text-align: center;
+    }
+
+    &--row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15rem;
+    }
+  }
+}
