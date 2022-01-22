@@ -1,0 +1,101 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.travel {
+  margin-top: 16rem;
+  padding: 10rem;
+  background-image: linear-gradient(
+      to left bottom,
+      rgba($color-primary-blue, 0.8),
+      rgba($color-primary-blue-2, 0.8)
+    ),
+    url("../../images/places/kenya.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include respond(phone) {
+    padding: 3rem;
+    margin-top: 20rem;
+  }
+
+  &__heading {
+    font-size: 12rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3rem;
+    font-weight: 100;
+    color: #f2f2f2;
+    font-family: "Permanent Marker", cursive;
+
+    @include respond(phone) {
+      font-size: 8rem;
+      letter-spacing: 3rem;
+      margin: 5rem auto;
+    }
+  }
+
+  &__form {
+
+    form {
+      display: flex;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+    }
+
+    &--button {
+      
+      max-width: 50%;
+      margin: 1rem auto;
+      padding: 2rem;
+
+      @include respond(phone) {
+        max-width: 100%;
+      }
+
+      button {
+        padding: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5rem;
+        border-radius: 1rem;
+        border: none;
+        display: block;
+        width: 30%;
+        margin: auto;
+        background-color: $color-primary-blue-3;
+        color: $color-white;
+        cursor: pointer;
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+        transition: all 0.3s;
+
+        @include respond(tab-port) {
+          width: 80%;
+        }
+
+        @include respond(phone) {
+          width: 100%;
+        }
+
+        &:hover {
+          transform: translateY(-1rem);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+    &--row {
+      // border: 1px solid red;
+      max-width: 100%;
+      flex: 1;
+      margin: auto;
+
+      @include respond(phone) {
+        margin: 0;
+      }
+    }
+  }
+}

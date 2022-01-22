@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .exrusion__item {
   width: 100%;
@@ -6,15 +7,15 @@
   height: 100rem;
   margin-right: 3rem;
   position: relative;
-//   background-image: url('../../images/excrusion/snowmobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-//   background-color: $color-white;
   box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
-  cursor: pointer;
   transition: all .3s;
-  // filter: brightness(50%);
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 
   &:hover {
     transform: scale(1.05);

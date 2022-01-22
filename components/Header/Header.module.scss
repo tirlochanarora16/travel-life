@@ -1,9 +1,19 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .header {
   display: flex;
   height: 80vh;
   margin-top: 4rem;
+  position: relative;
+  z-index: -1;
+  // border: 1px solid red
+
+  @include respond(phone) {
+    height: 100vh;
+    // margin-top: -30rem;
+    flex-direction: column;
+  }
   // clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%, 50% 100%);
 
   &__content {
@@ -21,14 +31,21 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 4rem;
+
+    @include respond(phone) {
+      padding: 6rem;
+    }
     
 
     h1 {
       font-size: 10rem;
       text-transform: uppercase;
-      // margin-bottom: 3rem;
       letter-spacing: 1rem;
       color: #f2f2f2;
+
+      @include respond(phone) {
+        font-size: 8rem;
+      }
     }
 
     p {
@@ -57,7 +74,6 @@
         border-radius: 4px;
         background-color: $color-primary-blue-3;
         letter-spacing: 1.5rem;
-        // border: 3px solid $color-black;
         position: relative;
         // z-index: 5;
       }

@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import ReactMapGl, { Marker } from "react-map-gl";
@@ -9,11 +9,19 @@ import markerImage from "../../images/logos/logo-2.png";
 import Link from "next/link";
 
 const Header = (props) => {
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [])
+
+  console.log(width < 500);
+
+
   const [viewport, setViewport] = useState({
     latitude: 45.4211,
     longitude: -75.6903,
     width: "100%",
-    height: "100%",
+    height: width > 500 ? "80%": "100%",
     zoom: 0,
   });
 

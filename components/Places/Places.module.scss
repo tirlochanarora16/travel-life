@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .places {
   //   margin-top: 45rem;
@@ -12,10 +13,30 @@
   );
   transform: skew(-5deg, -5deg);
 
+  @include respond(tab-port) {
+    padding: 5rem;
+    transform: skew(0, 0);
+  }
+
+  @include respond(phone) {
+    margin-top: 25rem;
+    padding: 5rem;
+    transform: skew(0, 0);
+  }
+
   &__content {
     padding: 3rem;
-    // border: 1px solid red;
     transform: skew(5deg, 5deg);
+
+    @include respond(tab-port) {
+      padding: 5rem;
+      transform: skew(0, 0);
+    }
+
+    @include respond(phone) {
+      padding: 0.5rem;
+      transform: skew(0, 0);
+    }
   }
 
   &__title {
@@ -26,7 +47,10 @@
     letter-spacing: 3rem;
     color: transparent;
     text-align: center;
-    // transform: skew(-10deg, -10deg);
+    
+    @include respond(phone) {
+      font-size: 10rem;
+    }
   }
 
   &__text {
@@ -34,6 +58,13 @@
     font-size: 4rem;
     text-align: center;
     margin: 10rem auto;
+
+    @include respond(phone) {
+      font-size: 3rem;
+      text-align: center;
+      line-height: 4rem;
+      margin: 7rem auto;
+    }
   }
 
   &__row {
@@ -42,6 +73,10 @@
 
     &:not(:last-child) {
       margin-bottom: 3rem;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
     }
     // border: solid red;
     // flex-wrap: wrap;

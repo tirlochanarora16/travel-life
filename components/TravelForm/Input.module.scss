@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.user-input {
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s;
+
+  @include respond(phone) {
+    max-width: 100%;
+  }
+
+  input {
+    display: block;
+    border: none;
+    width: 100%;
+    margin: auto;
+    border-radius: 5rem;
+    padding: 3rem;
+    transition: all 0.3s;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid #666;
+    background-color: #f2f2f2;
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid rgb(35, 189, 21);
+    }
+
+    &:placeholder-shown + label {
+      opacity: 0;
+      top: 100%;
+      left: 7%;
+    }
+    
+    &:focus:invalid {
+        border-bottom: 3px solid red;
+    }
+  }
+
+  label {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 1;
+    color: #f2f2f2;
+    transition: all 0.3s;
+
+    @include respond(tab-port) {
+      left: 13%;
+    }
+
+    @include respond(phone) {
+      left: 10%;
+    }
+  }
+}

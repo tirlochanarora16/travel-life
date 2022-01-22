@@ -12,7 +12,7 @@ const ExcrusionItem = (props) => {
       }}
     >
       <h1 className={styles["exrusion__item--heading"]}>{props.title}</h1>
-      <div className={styles["exrusion__item--content"]}></div>
+      {/* <div className={styles["exrusion__item--content"]}></div> */}
     </div>
   );
 };

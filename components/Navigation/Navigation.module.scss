@@ -1,15 +1,20 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .navigation {
   max-width: 90%;
+  z-index: 100;
   margin: 4rem auto auto auto;
-  // margin-bottom: 4rem;
-  // padding: 1.5rem;
+
+  @include respond(phone) {
+    max-width: 100%;
+  }
 
   &__menu {
     &--logo {
       width: 15rem;
       cursor: pointer;
+      // border: 1px solid red;
     }
 
     &--list {
@@ -19,12 +24,29 @@
       justify-content: space-between;
       align-items: center;
       text-transform: uppercase;
+      // border: 1px solid red;
+      text-align: center;
+
+      @include respond(phone) {
+        // opacity: 0;
+        // display: none;
+        margin-top: -4rem;
+        background-color: #f2f2f2;
+        position: relative;
+        // z-index: -1;
+        box-shadow: 0 0.7rem 2rem rgba($color-black, 0.8);
+      }
 
       li {
         display: inline-block;
         // border: 1px solid black;
         position: relative;
         cursor: pointer;
+
+        @include respond(phone) {
+          width: 100%;
+          display: block;
+        }
 
         &:not(.navigation__menu--logo) {
           padding: 3rem;
@@ -45,6 +67,18 @@
           opacity: 0;
         }
 
+        &.navigation__menu--logo {
+          @include respond(phone) {
+            display: none;
+          }
+          &-phone {
+            display: none;
+            @include respond(phone) {
+              display: block;
+            }
+          }
+        }
+
         &:hover::after {
           opacity: 1;
           bottom: 20%;
@@ -58,6 +92,41 @@
           }
         }
       }
+    }
+  }
+}
+
+.mobile__menu {
+  display: none;
+
+  @include respond(phone) {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid red;
+  }
+
+  &--logo {
+    width: 15rem;
+  }
+
+  &--button {
+    // display: block;
+    width: 4rem;
+    height: 0.5rem;
+    // border: 1px solid red;
+    position: relative;
+    background-color: $color-black;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4rem;
+      height: 0.5rem;
+      background-color: $color-black;
     }
   }
 }
