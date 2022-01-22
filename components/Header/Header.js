@@ -14,15 +14,15 @@ const Header = (props) => {
     setWidth(window.innerWidth);
   }, [])
 
-  console.log(width < 500);
+  // console.log(width < 500);
 
 
   const [viewport, setViewport] = useState({
     latitude: 45.4211,
     longitude: -75.6903,
     width: "100%",
-    height: width > 500 ? "80%": "100%",
-    zoom: 0,
+    height: '100%',
+    zoom: 1,
   });
 
   return (
@@ -48,6 +48,7 @@ const Header = (props) => {
           <ReactMapGl
             {...viewport}
             mapboxApiAccessToken={props.mapboxKey}
+            // controller={true}
             mapStyle="mapbox://styles/mapbox/navigation-day-v1"
             onViewportChange={(viewport) => setViewport(viewport)}
           >

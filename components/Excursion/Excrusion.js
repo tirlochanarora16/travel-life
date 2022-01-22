@@ -16,7 +16,7 @@ import parasailing from "../../images/excrusion/parasailing.jpg";
 
 const Excrusion = (props) => {
   return (
-    <section className={styles["excrusion"]}>
+    <section className={styles["excrusion"]} id="excrusions">
       <div className={styles["excrusion__content"]}>
         <h1 className={styles["excrusion__content--heading"]}>Excrusion</h1>
         <div className={styles["excrusion__content--row"]}>

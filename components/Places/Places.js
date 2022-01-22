@@ -13,7 +13,7 @@ import randomImg from "../../images/places/random.jpg";
 
 const Places = () => {
   return (
-    <section className={styles["places"]}>
+    <section className={styles["places"]} id="places">
       <div className={styles["places__content"]}>
         <h1 className={styles["places__title"]}>Places</h1>
         <p className={styles["places__text"]}>

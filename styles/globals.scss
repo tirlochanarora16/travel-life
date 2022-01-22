@@ -17,6 +17,7 @@
 html {
   font-size: 31.25%; // -> 1rem = 10px (10px/32px) * 100 = 31.25%
   background-color: #f3f3e9;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 

@@ -29,7 +29,7 @@ const Select = (props) => {
         <label htmlFor={props.id}>{props.label}</label>
         <select id={props.id} onChange={changeHandler}>
           {props.options.map((el) => (
-            <option selected={el === "Other" && showOtherInput} key={Math.random()} value={el}>
+            <option defaultValue={el === "Other" && showOtherInput} key={Math.random()} value={el}>
               {el}
             </option>
           ))}

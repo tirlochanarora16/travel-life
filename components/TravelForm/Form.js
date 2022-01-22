@@ -22,7 +22,7 @@ const Form = (props) => {
   };
 
   return (
-    <section className={styles["travel"]}>
+    <section className={styles["travel"]} id="travel">
       <h1 className={styles["travel__heading"]}>Travel Form</h1>
 
       <div className={styles["travel__form"]}>
