@@ -37,7 +37,7 @@ const Header = (props) => {
         <div className={styles["header__content"]}>
           <h1>trips worth remebering</h1>
           <p>
-            Travel to somewhere new ! We'll map out your trip for you, organize
+            Travel to somewhere new ! We&apos;ll map out your trip for you, organize
             your stay and plan great excursions.
           </p>
           <div className={styles["header__button"]}>

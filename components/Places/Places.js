@@ -18,7 +18,7 @@ const Places = () => {
         <h1 className={styles["places__title"]}>Places</h1>
         <p className={styles["places__text"]}>
           We have selected some destinations that we know very well ! Tell us
-          what you want & where you wanna go. We'll make it happen for you !
+          what you want & where you wanna go. We&apos;ll make it happen for you !
         </p>
         <div className={styles["places__row"]}>
           <PlaceItem title="Svalbard" img={svalbardImg.src} />
