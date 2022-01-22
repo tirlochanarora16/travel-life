@@ -57,7 +57,7 @@ const Header = (props) => {
                 latitude={location.geometry.coordinates[1]}
                 longitude={location.geometry.coordinates[0]}
               >
-                <Image src={markerImage} width={10} height={10} />
+                <Image src={markerImage} width={10} height={10} alt="Travel Life marker" />
                 <p style={{ fontSize: "2rem" }}>{location.properties.NAME}</p>
               </Marker>
             ))}
