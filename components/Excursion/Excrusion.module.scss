@@ -9,31 +9,25 @@
     rgba($color-primary-green-dark, 1),
     rgba($color-primary-green-light, 1)
   );
-  transform: skew(-3deg, -3deg);
 
   @include respond(tab-port) {
-    padding: 5rem;
-    transform: skew(0, 0);
+    padding: 5rem
   }
 
   @include respond(phone) {
     padding: 5rem;
-    margin-top: 25rem;
-    transform: skew(0, 0);
+    margin-top: 25rem
   }
 
   &__content {
     padding: 3rem;
-    transform: skew(3deg, 3deg);
 
     @include respond(tab-port) {
       padding: 5rem;
-      transform: skew(0, 0);
     }
 
     @include respond(phone) {
       padding: 1rem;
-      transform: skew(0, 0);
     }
 
     &--heading {

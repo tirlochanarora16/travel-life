@@ -1,8 +1,12 @@
-import Layout from "../components/UI/Layout";
+import FormProvider from "../context/FormContext";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <FormProvider>
+      <Component {...pageProps} />
+    </FormProvider>
+  );
 }
 
 export default MyApp;

@@ -1,48 +1,36 @@
-import { useState } from "react";
-import Input from "./Input";
+import { useContext } from "react";
+
 import styles from "./Select.module.scss";
 
-import { formValues } from "./Form";
+import { FormContext } from "../../context/FormContext";
 
 const Select = (props) => {
-  const [showOtherInput, setShowOtherInput] = useState(false);
-  const changeHandler = (event) => {
-    const inputValue = event.target.value;
-    if (inputValue === "Other") {
-      setShowOtherInput(true);
-      props.setInputValue({ inputFor: event.target.id, value: inputValue });
-    } else {
-      setShowOtherInput(false);
-      props.setInputValue({ inputFor: event.target.id, value: inputValue });
-    }
-  };
+  const { formInfo, setFormInfo } = useContext(FormContext);
 
-  const updateFormInput = (data) => {
-    const { inputFor, value } = data;
-    formValues[inputFor] = value;
-    console.log(formValues);
+  const changeHandler = (event) => {
+    const inputVariable = event.target.id;
+
+    setFormInfo((previousFormState) => ({
+      ...previousFormState,
+      [inputVariable]: event.target.value,
+    }));
   };
 
   return (
     <div className={styles["form__select"]}>
       <div className={styles["form__select--format"]}>
         <label htmlFor={props.id}>{props.label}</label>
-        <select id={props.id} onChange={changeHandler}>
-          {props.options.map((el) => (
-            <option defaultValue={el === "Other" && showOtherInput} key={Math.random()} value={el}>
+        <select
+          id={props.id}
+          onChange={changeHandler}
+          defaultValue={formInfo[props.id]}
+        >
+          {props.options.map((el, i) => (
+            <option key={el + i} value={el}>
               {el}
             </option>
           ))}
         </select>
-        {showOtherInput && (
-          <Input
-            type="text"
-            id="destination"
-            placeholder="Enter Country"
-            setInputValue={updateFormInput}
-            onChange={changeHandler}
-          />
-        )}
       </div>
     </div>
   );

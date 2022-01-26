@@ -5,16 +5,11 @@ import ReactMapGl, { Marker } from "react-map-gl";
 
 import styles from "./Header.module.scss";
 import * as data from "../../data/data.json";
-import markerImage from "../../images/logos/logo-2.png";
+import markerImage from "../../images/logos/pin.png";
 import Link from "next/link";
 
 const Header = (props) => {
-  const [width, setWidth] = useState(0);
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, [])
 
-  // console.log(width < 500);
 
 
   const [viewport, setViewport] = useState({
@@ -22,7 +17,7 @@ const Header = (props) => {
     longitude: -75.6903,
     width: "100%",
     height: '100%',
-    zoom: 1,
+    zoom: 0,
   });
 
   return (
@@ -44,7 +39,7 @@ const Header = (props) => {
             <Link href="#">Learn More</Link>
           </div>
         </div>
-        <div className={styles["header__map"]}>
+        {/* <div className={styles["header__map"]}>
           <ReactMapGl
             {...viewport}
             mapboxApiAccessToken={props.mapboxKey}
@@ -58,12 +53,12 @@ const Header = (props) => {
                 latitude={location.geometry.coordinates[1]}
                 longitude={location.geometry.coordinates[0]}
               >
-                <Image src={markerImage} width={10} height={10} alt="Travel Life marker" />
+                <Image src={markerImage} width={20} height={25} alt="Travel Life marker" />
                 <p style={{ fontSize: "2rem" }}>{location.properties.NAME}</p>
               </Marker>
             ))}
           </ReactMapGl>
-        </div>
+        </div> */}
       </header>
     </Fragment>
   );

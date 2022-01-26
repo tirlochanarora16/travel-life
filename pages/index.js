@@ -18,6 +18,7 @@ export default function Home(props) {
       <NavigationMenu />
       <main>
         <Header mapboxKey={props.mapboxKey} />
+        {/* <Form showBackground={false} /> */}
         <Places />
         <Excrusion />
         <Form />
