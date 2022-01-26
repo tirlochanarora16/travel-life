@@ -4,19 +4,15 @@
 .excrusion {
   margin: 35rem auto auto auto;
   padding: 10rem;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-primary-green-dark, 1),
-    rgba($color-primary-green-light, 1)
-  );
+  background-color: #b9b7b7;
 
   @include respond(tab-port) {
-    padding: 5rem
+    padding: 5rem;
   }
 
   @include respond(phone) {
     padding: 5rem;
-    margin-top: 25rem
+    margin-top: 25rem;
   }
 
   &__content {
@@ -35,8 +31,8 @@
       font-size: 12rem;
       background-image: linear-gradient(
         to left,
-        $color-primary-blue-3,
-        $color-primary-blue-2
+        $color-main-blue,
+        $color-main-green
       );
       background-clip: text;
       letter-spacing: 3rem;

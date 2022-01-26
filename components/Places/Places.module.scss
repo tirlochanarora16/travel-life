@@ -2,18 +2,9 @@
 @import "../../styles/mixins";
 
 .places {
-  margin: 45rem auto auto auto;
+  margin: 40rem auto auto auto;
   padding: 10rem;
-  background-image: linear-gradient(
-    to left bottom,
-    rgba($color-primary-blue, 0.8),
-    rgba($color-primary-blue-2, 0.8)
-  );
-  // background: linear-gradient(
-  //   to right bottom,
-  //   #b8b7b7 0%,
-  //   #d8d8d8 100%
-  // );
+  background-color: #b9b7b7;
 
   @include respond(tab-port) {
     padding: 5rem;
@@ -39,8 +30,11 @@
   &__title {
     text-transform: uppercase;
     font-size: 12rem;
-    background-image: linear-gradient(to left, #fff, #666);
-    // background-image: linear-gradient(to right, #000, #969696);
+    background-image: linear-gradient(
+      to left,
+      $color-main-blue,
+      $color-main-green
+    );
     background-clip: text;
     color: transparent;
     letter-spacing: 3rem;
@@ -52,7 +46,7 @@
   }
 
   &__text {
-    color: $color-white;
+    color: $color-black;
     font-size: 4rem;
     text-align: center;
     margin: 10rem auto;
@@ -76,7 +70,5 @@
     @include respond(phone) {
       flex-direction: column;
     }
-    // border: solid red;
-    // flex-wrap: wrap;
   }
 }

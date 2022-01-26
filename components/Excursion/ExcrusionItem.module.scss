@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 2rem 4rem rgba($color-black, 0.4);
+  box-shadow: 0 1.5rem 2rem 1rem rgba($color-black, .8);
   transition: all .3s;
 
   &:not(:last-child) {

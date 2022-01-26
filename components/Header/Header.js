@@ -9,9 +9,6 @@ import markerImage from "../../images/logos/pin.png";
 import Link from "next/link";
 
 const Header = (props) => {
-
-
-
   const [viewport, setViewport] = useState({
     latitude: 45.4211,
     longitude: -75.6903,
@@ -36,7 +33,7 @@ const Header = (props) => {
             your stay and plan great excursions.
           </p>
           <div className={styles["header__button"]}>
-            <Link href="#">Learn More</Link>
+            <Link href="#">find a trip now</Link>
           </div>
         </div>
         {/* <div className={styles["header__map"]}>

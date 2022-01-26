@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 import Places from "../components/Places/Places";
 import Excrusion from "../components/Excursion/Excrusion";
 import Form from "../components/TravelForm/Form";
+import FormContainer from "../components/TravelForm/FormContainer";
 
 export default function Home(props) {
   return (
@@ -18,10 +19,10 @@ export default function Home(props) {
       <NavigationMenu />
       <main>
         <Header mapboxKey={props.mapboxKey} />
-        {/* <Form showBackground={false} /> */}
+        <Form forHeader={true} />
         <Places />
         <Excrusion />
-        <Form />
+        <FormContainer />
       </main>
     </Fragment>
   );
