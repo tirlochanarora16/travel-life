@@ -7,6 +7,7 @@ import Places from "../components/Places/Places";
 import Excrusion from "../components/Excursion/Excrusion";
 import Form from "../components/TravelForm/Form";
 import FormContainer from "../components/TravelForm/FormContainer";
+import Map from "../components/Map/Map";
 
 export default function Home(props) {
   return (
@@ -18,9 +19,10 @@ export default function Home(props) {
       </Head>
       <NavigationMenu />
       <main>
-        <Header mapboxKey={props.mapboxKey} />
+        <Header />
         <Form forHeader={true} />
         <Places />
+        <Map mapboxKey={props.mapboxKey} />
         <Excrusion />
         <FormContainer />
       </main>

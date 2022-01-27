@@ -21,7 +21,7 @@ const Form = (props) => {
     <div
       className={styles["travel__form"]}
       style={{
-        marginTop: props.forHeader && (width > 400) ? "-15rem" : "-8rem",
+        marginTop: props.forHeader && (width > 400) ? "-20rem" : "-9rem",
         position: props.forHeader ? "relative" : "",
         zIndex: props.forHeader ? "200" : "",
         backgroundColor: props.forHeader ? "#f2f2f2" : "",
@@ -37,7 +37,7 @@ const Form = (props) => {
               label="Name"
             />
           )}
-          {currentFormPage === 1 && (
+          {currentFormPage === 0 && (
             <Input
               type="email"
               id="email"
@@ -45,7 +45,7 @@ const Form = (props) => {
               label="E-mail"
             />
           )}
-          {currentFormPage === 2 && (
+          {currentFormPage === 0 && (
             <Input
               type="number"
               id="mobile"
@@ -53,7 +53,7 @@ const Form = (props) => {
               label="Phone"
             />
           )}
-          {currentFormPage === 3 && (
+          {currentFormPage === 5 && (
             <Input
               type="number"
               id="budget"
@@ -63,21 +63,21 @@ const Form = (props) => {
           )}
         </div>
         <div className={styles["travel__form--row"]}>
-          {currentFormPage === 4 && (
+          {currentFormPage === 1 && (
             <Select
               id="destination"
               label="Destination: "
               options={countries}
             />
           )}
-          {currentFormPage === 5 && (
+          {currentFormPage === 2 && (
             <Select
               id="reason"
               label="Reason: "
               options={["Leisure & Tourism", "Work", "Honey Moon"]}
             />
           )}
-          {currentFormPage === 6 && (
+          {currentFormPage === 3 && (
             <Select
               id="excrusion"
               label="Excrusions: "
@@ -98,14 +98,14 @@ const Form = (props) => {
               ]}
             />
           )}
-          {currentFormPage === 7 && (
+          {currentFormPage === 4 && (
             <Select
               id="guide"
               label="Guide?"
-              options={["Yes", "No", "Yes. For some trips, not all"]}
+              options={["Yes", "For some trips", "No thanks"]}
             />
           )}
-          {currentFormPage === 8 && (
+          {currentFormPage === 6 && (
             <p className={styles["travel__form--confirmation"]}>
               Submit the form?
             </p>
@@ -116,10 +116,10 @@ const Form = (props) => {
         {currentFormPage > 0 && (
           <button onClick={decrementFormPage}>Back</button>
         )}
-        {currentFormPage < 8 && (
+        {currentFormPage < 6 && (
           <button onClick={incrementFormPage}>Next</button>
         )}
-        {currentFormPage === 8 && <button>Submit</button>}
+        {currentFormPage === 6 && <button>Submit</button>}
       </div>
     </div>
   );

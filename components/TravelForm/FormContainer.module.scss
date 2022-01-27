@@ -36,13 +36,14 @@
   }
 
   &__title {
-    margin: 6rem auto 9rem auto;
+    margin: 6rem auto 15rem auto;
     font-size: 4rem;
     text-align: center;
     color: $color-white;
 
     @include respond(phone) {
       font-size: 3.5rem;
+      line-height: 5.5rem;
     }
   }
 }
