@@ -4,15 +4,16 @@
 .excrusion {
   margin: 25rem auto auto auto;
   padding: 10rem;
-  background-color: #b9b7b7;
+  background-image: linear-gradient(to right bottom, #f2f2f2, #9c9c9c);
 
   @include respond(tab-port) {
     padding: 5rem;
   }
 
   @include respond(phone) {
+    overflow-x: hidden;
+    margin: 25rem 0 0 0;
     padding: 5rem;
-    margin-top: 25rem;
   }
 
   &__content {
@@ -41,7 +42,7 @@
 
       @include respond(phone) {
         margin-bottom: 6rem;
-        font-size: 7rem;
+        font-size: 6rem;
       }
     }
 
@@ -49,6 +50,7 @@
       display: flex;
       justify-content: space-between;
       margin-top: 15rem;
+      // border: 1px solid red;
 
       @include respond(phone) {
         margin-top: 3rem;

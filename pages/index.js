@@ -15,6 +15,7 @@ export default function Home(props) {
       <Head>
         <title>Travel Life</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        {/* <meta name="viewport" content="user-scalable=0;"/> */}
         <link rel="icon" href="/icon.png" type="image/png" />
       </Head>
       <NavigationMenu />

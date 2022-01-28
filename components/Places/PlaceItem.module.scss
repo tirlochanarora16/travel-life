@@ -13,7 +13,7 @@
     background-position: center;
     transition: all 0.3s;
     overflow: hidden;
-    box-shadow: 0 1.5rem 2rem 1rem rgba($color-black, .8);
+    box-shadow: 0 1rem 1rem .7rem rgba($color-black, .5);
 
     @include respond(phone) {
       height: 50rem;
@@ -22,7 +22,7 @@
     cursor: pointer;
 
     &:not(:last-child) {
-      margin-right: 3rem;
+      margin-right: 5rem;
       
       @include respond(phone) {
         margin-right: 1rem;
