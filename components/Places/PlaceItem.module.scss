@@ -4,8 +4,14 @@
 .place {
   position: relative;
   flex: 1;
+  overflow-y: hidden;
+  border-radius: 6rem;
+  padding: 1.5rem;
+  // border: 1px solid red;
 
   &__img {
+    display: block;
+    margin: auto;
     border-radius: 6rem;
     height: 80rem;
     background-repeat: no-repeat;
@@ -13,7 +19,7 @@
     background-position: center;
     transition: all 0.3s;
     overflow: hidden;
-    box-shadow: 0 1rem 1rem .7rem rgba($color-black, .5);
+    box-shadow: 0 1rem 1.5rem .5rem rgba($color-black, .5);
 
     @include respond(phone) {
       height: 50rem;
@@ -22,7 +28,7 @@
     cursor: pointer;
 
     &:not(:last-child) {
-      margin-right: 5rem;
+      // margin-right: 5rem;
       
       @include respond(phone) {
         margin-right: 1rem;
