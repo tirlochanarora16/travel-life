@@ -17,9 +17,7 @@
     box-shadow: 0 .2rem 1.5rem rgba(#413e3e, .75);
 
     @include respond(phone) {
-      border-radius: 0;
-      overflow: hidden;
-      padding: 6rem;
+      border-radius: 4rem;
     }
 
   }

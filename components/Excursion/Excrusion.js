@@ -16,11 +16,11 @@ import sledding from "../../images/excrusion/sledding.jpg";
 import surprise from "../../images/excrusion/surprise.jpg";
 import parasailing from "../../images/excrusion/parasailing.jpg";
 
-const Excrusion = (props) => {
+const Excrusion = () => {
   return (
     <section className={styles["excrusion"]} id="excrusions">
+      <Heading title="Excursion" />
       <div className={styles["excrusion__content"]}>
-        <Heading title="Excursion" />
         <div className={styles["excrusion__content--row"]}>
           <ExcrusionItem image={snowmobile.src} title="Go! Snowmobile" />
           <ExcrusionItem image={horseRiding.src} title="Go! Horse riding" />

@@ -23,26 +23,8 @@
     }
 
     @include respond(phone) {
+      margin-top: 10rem;
       padding: 1rem;
-    }
-
-    &--heading {
-      text-transform: uppercase;
-      font-size: 12rem;
-      background-image: linear-gradient(
-        to left,
-        $color-main-blue,
-        $color-main-green
-      );
-      background-clip: text;
-      letter-spacing: 3rem;
-      color: transparent;
-      text-align: center;
-
-      @include respond(phone) {
-        margin-bottom: 6rem;
-        font-size: 6rem;
-      }
     }
 
     &--row {
@@ -51,7 +33,7 @@
       margin-top: 15rem;
 
       @include respond(phone) {
-        margin-top: 3rem;
+        margin-top: 8rem;
         flex-direction: column;
       }
     }

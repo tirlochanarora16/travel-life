@@ -13,10 +13,15 @@
     background-clip: text;
     color: transparent;
     letter-spacing: 3rem;
+    // padding-right: -3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
     @include respond(phone) {
-      font-size: 10rem;
+      
+      font-size: 5.4rem;
     }
   }
 }

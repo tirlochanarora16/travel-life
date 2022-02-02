@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import ReactMapGl, { Marker } from "react-map-gl";
 import Heading from "../UI/Heading";
@@ -25,7 +25,7 @@ const Map = (props) => {
           <ReactMapGl
             {...viewport}
             mapboxApiAccessToken={props.mapboxKey}
-            // controller={true}
+            
             mapStyle="mapbox://styles/mapbox/navigation-day-v1"
             onViewportChange={(viewport) => setViewport(viewport)}
           >

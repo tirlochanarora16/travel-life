@@ -15,8 +15,6 @@ const Form = (props) => {
     setWidth(window.innerWidth);
   }, []);
 
-  // console.log(width);
-
   return (
     <div
       className={styles["travel__form"]}
