@@ -1,5 +1,7 @@
-import styles from "./Excrusion.module.scss";
 import ExcrusionItem from "./ExcrusionItem";
+import Heading from "../UI/Heading";
+
+import styles from "./Excrusion.module.scss";
 
 import snowmobile from "../../images/excrusion/snowmobile.jpg";
 import horseRiding from "../../images/excrusion/horseRiding.jpg";
@@ -18,7 +20,7 @@ const Excrusion = (props) => {
   return (
     <section className={styles["excrusion"]} id="excrusions">
       <div className={styles["excrusion__content"]}>
-        <h1 className={styles["excrusion__content--heading"]}>Excrusion</h1>
+        <Heading title="Excursion" />
         <div className={styles["excrusion__content--row"]}>
           <ExcrusionItem image={snowmobile.src} title="Go! Snowmobile" />
           <ExcrusionItem image={horseRiding.src} title="Go! Horse riding" />

@@ -34,6 +34,8 @@
     justify-content: center;
     padding: 0 6rem;
     text-align: center;
+    border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
 
     @include respond(phone) {
       padding: 6rem;
@@ -88,7 +90,7 @@
         background-color: $color-white;
         letter-spacing: 1.5rem;
         position: relative;
-        box-shadow: 0 .5rem 1rem .5rem rgba($color-black, 0.5);
+        // box-shadow: 0 0.25rem .5rem 0.25rem rgba(#666, 0.25);
 
         @include respond(phone) {
           width: 100%;
@@ -107,7 +109,7 @@
         z-index: -1;
         border-radius: 20rem;
         transition: all 0.5s;
-        box-shadow: 0 1rem 3rem 1rem rgba($color-black, 0.5);
+        box-shadow: 0 .5rem 5rem rgba(#000, .25);
       }
       &:hover::after {
         opacity: 0;

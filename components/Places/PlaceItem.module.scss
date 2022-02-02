@@ -7,7 +7,6 @@
   overflow-y: hidden;
   border-radius: 6rem;
   padding: 1.5rem;
-  // border: 1px solid red;
 
   &__img {
     display: block;
@@ -19,7 +18,7 @@
     background-position: center;
     transition: all 0.3s;
     overflow: hidden;
-    box-shadow: 0 1rem 1.5rem .5rem rgba($color-black, .5);
+    box-shadow: 0 .2rem 1.5rem rgba(#000, .75);
 
     @include respond(phone) {
       height: 50rem;

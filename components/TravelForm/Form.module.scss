@@ -7,7 +7,7 @@
     margin: 4rem auto;
     padding: 2rem;
     border-radius: 6rem;
-    box-shadow: 0 1rem 2rem 1rem rgba($color-black, 0.5);
+    box-shadow: 0 .2rem 2rem rgba(#000, .5);
     background-color: #f2f2f2c4;
 
     @include respond(phone) {
@@ -42,7 +42,7 @@
         background-color: $color-main-blue;
         color: $color-white;
         cursor: pointer;
-        box-shadow: 0 1rem 3rem 0.5rem rgba($color-black, 0.8);
+        box-shadow: 0 .2rem 1.5rem rgba(#413e3e, .75);
         transition: all 0.3s;
 
         @include respond(tab-port) {

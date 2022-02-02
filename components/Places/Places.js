@@ -10,12 +10,13 @@ import mayotteImg from "../../images/places/mayotte.jpg";
 import senegalImg from "../../images/places/senegal.jpg";
 import thailandImg from "../../images/places/thailand.jpg";
 import randomImg from "../../images/places/random.jpg";
+import Heading from "../UI/Heading";
 
 const Places = () => {
   return (
     <section className={styles["places"]} id="places">
       <div className={styles["places__content"]}>
-        <h1 className={styles["places__title"]}>Places</h1>
+        <Heading title="Places" />
         <p className={styles["places__text"]}>
           We have selected some destinations that we know very well ! Tell us
           what you want & where you wanna go. We&apos;ll make it happen for you !

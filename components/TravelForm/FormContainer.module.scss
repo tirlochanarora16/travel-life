@@ -13,6 +13,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
 
   @include respond(phone) {
     padding: 3rem;

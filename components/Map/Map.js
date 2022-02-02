@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Image from "next/image";
 import ReactMapGl, { Marker } from "react-map-gl";
+import Heading from "../UI/Heading";
 
 import data from "../../data/data.json";
 import markerImage from "../../images/logos/pin.png";
@@ -17,31 +18,34 @@ const Map = (props) => {
   });
 
   return (
-    <div className={styles["map"]}>
-      <div className={styles["map__container"]}>
-        <ReactMapGl
-          {...viewport}
-          mapboxApiAccessToken={props.mapboxKey}
-          // controller={true}
-          mapStyle="mapbox://styles/mapbox/navigation-day-v1"
-          onViewportChange={(viewport) => setViewport(viewport)}
-        >
-          {data.features.map((location) => (
-            <Marker
-              key={location.properties.LOCATION_ID}
-              latitude={location.geometry.coordinates[1]}
-              longitude={location.geometry.coordinates[0]}
-            >
-              <Image
-                src={markerImage}
-                width={20}
-                height={25}
-                alt="Travel Life marker"
-              />
-              <p style={{ fontSize: "2rem" }}>{location.properties.NAME}</p>
-            </Marker>
-          ))}
-        </ReactMapGl>
+    <div className={styles["destinations"]}>
+      <Heading title="destinations" />
+      <div className={styles["map"]}>
+        <div className={styles["map__container"]}>
+          <ReactMapGl
+            {...viewport}
+            mapboxApiAccessToken={props.mapboxKey}
+            // controller={true}
+            mapStyle="mapbox://styles/mapbox/navigation-day-v1"
+            onViewportChange={(viewport) => setViewport(viewport)}
+          >
+            {data.features.map((location) => (
+              <Marker
+                key={location.properties.LOCATION_ID}
+                latitude={location.geometry.coordinates[1]}
+                longitude={location.geometry.coordinates[0]}
+              >
+                <Image
+                  src={markerImage}
+                  width={30}
+                  height={40}
+                  alt="Travel Life marker"
+                />
+                <p style={{ fontSize: "2.5rem" }}>{location.properties.NAME}</p>
+              </Marker>
+            ))}
+          </ReactMapGl>
+        </div>
       </div>
     </div>
   );

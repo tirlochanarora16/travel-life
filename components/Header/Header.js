@@ -22,7 +22,7 @@ const Header = () => {
             your stay and plan great excursions.
           </p>
           <div className={styles["header__button"]}>
-            <Link href="#">find a trip now</Link>
+            <Link href="#places">find a trip now</Link>
           </div>
         </div>
       </header>
