@@ -19,6 +19,8 @@
   @include respond(phone) {
     padding: 3rem;
     margin-top: 20rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &__heading {

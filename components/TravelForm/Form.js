@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import styles from "./Form.module.scss";
+import Heading from "../UI/Heading";
 import Input from "./Input";
 import Select from "./Select";
 import { FormContext } from "../../context/FormContext";
+
 import { countries } from "../../utils/countriesList";
-import useMediaQuery from "../../hooks/useMedia";
+
+import styles from "./Form.module.scss";
 
 const Form = (props) => {
   const { currentFormPage, incrementFormPage, decrementFormPage } =
@@ -19,13 +21,23 @@ const Form = (props) => {
     <div
       className={styles["travel__form"]}
       style={{
-        marginTop: props.forHeader && (width > 400) ? "-20rem" : "-9rem",
+        marginTop: props.forHeader && width > 400 ? "-15rem" : "-9rem",
         position: props.forHeader ? "relative" : "",
         zIndex: props.forHeader ? "200" : "",
         backgroundColor: props.forHeader ? "#f2f2f2" : "",
       }}
     >
       <form>
+        {props.forHeader && (
+          <div className={styles["travel__form-text"]}>
+            <Heading title="BOOK YOUR ADVENTURE NOW" />
+            <p>
+              Where have you always wanted to go ? We'll make it happen for you.
+              You're just a few clicks away ! Submit the form and we'll be in
+              touch.
+            </p>
+          </div>
+        )}
         <div className={styles["travel__form--row"]}>
           {currentFormPage === 0 && (
             <Input

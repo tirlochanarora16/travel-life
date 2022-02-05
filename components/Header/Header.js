@@ -16,10 +16,10 @@ const Header = () => {
       </Head>
       <header className={styles["header"]}>
         <div className={styles["header__content"]}>
-          <h1>trips worth remebering</h1>
+          <h1>GO ON A JOURNEY YOU WILL NEVER FORGET !</h1>
           <p>
-            Travel to somewhere new ! We&apos;ll map out your trip for you, organize
-            your stay and plan great excursions.
+            Travel to somewhere new ! We&apos;ll map out your trip for you,
+            organize your stay and plan great excursions.
           </p>
           <div className={styles["header__button"]}>
             <Link href="#places">find a trip now</Link>

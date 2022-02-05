@@ -8,6 +8,7 @@ import Excrusion from "../components/Excursion/Excrusion";
 import Form from "../components/TravelForm/Form";
 import FormContainer from "../components/TravelForm/FormContainer";
 import Map from "../components/Map/Map";
+import Footer from "../components/Footer/Footer";
 
 export default function Home(props) {
   return (
@@ -27,6 +28,7 @@ export default function Home(props) {
         <Excrusion />
         <FormContainer />
       </main>
+      <Footer />
     </Fragment>
   );
 }

@@ -14,7 +14,7 @@
   }
 
   @include respond(phone) {
-    height: 70vh;
+    height: 80vh;
     flex-direction: column;
   }
 
@@ -35,14 +35,16 @@
     padding: 0 6rem;
     text-align: center;
     border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
+    border-bottom-right-radius: 20%;
 
     @include respond(phone) {
       padding: 6rem;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
     h1 {
-      font-size: 10rem;
+      font-size: 9rem;
       text-transform: uppercase;
       letter-spacing: 1rem;
       color: #f2f2f2;
@@ -58,7 +60,7 @@
 
     p {
       font-size: 4rem;
-      margin: 9rem 0;
+      margin: 7rem 0;
       line-height: 6rem;
       color: #f2f2f2;
     }
@@ -109,7 +111,7 @@
         z-index: -1;
         border-radius: 20rem;
         transition: all 0.5s;
-        box-shadow: 0 .5rem 5rem rgba(#000, .25);
+        box-shadow: 0 0.5rem 5rem rgba(#000, 0.25);
       }
       &:hover::after {
         opacity: 0;

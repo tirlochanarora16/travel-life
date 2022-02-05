@@ -7,11 +7,27 @@
     margin: 4rem auto;
     padding: 2rem;
     border-radius: 6rem;
-    box-shadow: 0 .2rem 2rem rgba(#000, .5);
+    box-shadow: 0 0.2rem 2rem rgba(#000, 0.5);
     background-color: #f2f2f2c4;
 
     @include respond(phone) {
       width: 80%;
+    }
+
+    &-text {
+      text-align: center;
+
+      h1 {
+        margin: 3rem 5rem 0 5rem;
+        letter-spacing: 0rem;
+        font-size: 7rem;
+      }
+
+      p {
+        font-size: 3.5rem;
+        line-height: 5rem;
+        margin: 3rem 5rem;
+      }
     }
 
     form {
@@ -42,7 +58,7 @@
         background-color: $color-main-blue;
         color: $color-white;
         cursor: pointer;
-        box-shadow: 0 .2rem 1.5rem rgba(#413e3e, .75);
+        box-shadow: 0 0.2rem 1.5rem rgba(#413e3e, 0.75);
         transition: all 0.3s;
 
         @include respond(tab-port) {
@@ -78,8 +94,8 @@
     &--confirmation {
       color: $color-black;
       text-align: center;
-      font-size: 4rem;
-      letter-spacing: 0.7rem;
+      font-size: 3.75rem;
+      letter-spacing: 0.4rem;
       margin: 8rem 0;
     }
   }
