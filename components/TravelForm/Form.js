@@ -32,9 +32,9 @@ const Form = (props) => {
           <div className={styles["travel__form-text"]}>
             <Heading title="BOOK YOUR ADVENTURE NOW" />
             <p>
-              Where have you always wanted to go ? We'll make it happen for you.
-              You're just a few clicks away ! Submit the form and we'll be in
-              touch.
+              Where have you always wanted to go ? We&apos;ll make it happen for
+              you. You&apos;re just a few clicks away ! Submit the form and
+              we&apos;ll be in touch.
             </p>
           </div>
         )}
