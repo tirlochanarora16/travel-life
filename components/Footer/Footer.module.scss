@@ -150,7 +150,6 @@
 
       @include respond(phone) {
         max-width: 90%;
-        border: 1px solid black;
         flex-direction: column;
       }
 
