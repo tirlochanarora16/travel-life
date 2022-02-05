@@ -10,8 +10,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 .2rem 2rem rgba(#413e3e, .75);
-  transition: all .3s;
+  box-shadow: 0 0.2rem 2rem rgba(#413e3e, 0.75);
+  transition: all 0.3s;
+
+  @include respond(tab-port) {
+    height: 80rem;
+  }
 
   @include respond(phone) {
     overflow-x: hidden;
@@ -41,6 +45,10 @@
     opacity: 0;
     transform: translate(-50%, -50%);
     color: $color-white;
-    transition: all .3s;
+    transition: all 0.3s;
+
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
   }
 }

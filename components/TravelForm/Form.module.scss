@@ -10,6 +10,10 @@
     box-shadow: 0 0.2rem 2rem rgba(#000, 0.5);
     background-color: #f2f2f2c4;
 
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
     @include respond(phone) {
       width: 80%;
     }
@@ -47,6 +51,7 @@
       }
 
       button {
+        flex: 0 0 40%;
         padding: 3rem;
         text-transform: uppercase;
         letter-spacing: 1.5rem;
@@ -62,6 +67,7 @@
         transition: all 0.3s;
 
         @include respond(tab-port) {
+          padding: 2rem;
           width: 80%;
         }
 

@@ -8,6 +8,11 @@
     padding: 5rem;
     text-align: center;
 
+    @include respond(tab-port) {
+      max-width: 80%;
+      padding: 1rem;
+    }
+
     @include respond(phone) {
       max-width: 80%;
       padding: 1rem;
@@ -43,6 +48,10 @@
       border-radius: 10rem;
       box-shadow: 0 0.2rem 0.75rem rgba(#413e3e, 0.75);
 
+      @include respond(tab-port) {
+        padding: 2rem;
+      }
+
       @include respond(phone) {
         border-radius: 4rem;
       }
@@ -50,6 +59,10 @@
       h3 {
         font-size: 2.5rem;
         margin-top: 1.5rem;
+
+        @include respond(tab-port) {
+          display: none;
+        }
 
         @include respond(phone) {
           display: none;
@@ -74,11 +87,11 @@
   }
 
   &__agency {
-    @include respond(phone) {
-      margin: 8rem;
-    }
     div {
       text-align: center;
+    }
+    @include respond(phone) {
+      margin: 8rem;
     }
   }
 
@@ -104,6 +117,10 @@
       align-items: center;
 
       &-1 {
+        @include respond(tab-port) {
+          display: none;
+        }
+
         @include respond(phone) {
           display: none;
         }
@@ -115,6 +132,10 @@
           font-size: 3rem;
           margin-left: 2rem;
           margin-right: 1.8rem;
+        }
+
+        @include respond(tab-port) {
+          flex: 1;
         }
 
         @include respond(phone) {
@@ -148,6 +169,11 @@
       display: flex;
       justify-content: space-between;
 
+      @include respond(tab-port) {
+        max-width: 100%;
+        padding: 1rem;
+      }
+
       @include respond(phone) {
         max-width: 90%;
         flex-direction: column;
@@ -171,7 +197,6 @@
             &:visited {
               text-transform: uppercase;
               text-decoration: none;
-              //   color: $color-black;
               color: $color-main-blue;
             }
 

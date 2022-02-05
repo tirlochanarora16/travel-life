@@ -17,25 +17,36 @@ const Footer = () => {
           <h2>find us on social media</h2>
           <div className={styles["footer__icons"]}>
             <a href="#" className={styles["footer__icons-container"]}>
-              <Image
-                src={facebook}
-                alt="Facebook Logo"
-                height={40}
-                width={40}
-              />
+              <div>
+                <Image
+                  src={facebook}
+                  alt="Facebook Logo"
+                  height={40}
+                  width={40}
+                />
+              </div>
               <h3>Facebook</h3>
             </a>
             <a href="#" className={styles["footer__icons-container"]}>
-              <Image src={youtube} alt="YouTube Logo" height={40} width={50} />
+              <div>
+                <Image
+                  src={youtube}
+                  alt="YouTube Logo"
+                  height={40}
+                  width={50}
+                />
+              </div>
               <h3>YouTube</h3>
             </a>
             <a href="#" className={styles["footer__icons-container"]}>
-              <Image
-                src={instagram}
-                alt="Instagram Logo"
-                height={40}
-                width={40}
-              />
+              <div>
+                <Image
+                  src={instagram}
+                  alt="Instagram Logo"
+                  height={40}
+                  width={40}
+                />
+              </div>
               <h3>Instagram</h3>
             </a>
           </div>

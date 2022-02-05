@@ -18,7 +18,11 @@
     background-position: center;
     transition: all 0.3s;
     overflow: hidden;
-    box-shadow: 0 .2rem 1.5rem rgba(#000, .75);
+    box-shadow: 0 0.2rem 1.5rem rgba(#000, 0.75);
+
+    @include respond(tab-port) {
+      height: 60rem;
+    }
 
     @include respond(phone) {
       height: 50rem;
@@ -27,8 +31,6 @@
     cursor: pointer;
 
     &:not(:last-child) {
-      // margin-right: 5rem;
-      
       @include respond(phone) {
         margin-right: 1rem;
         margin-bottom: 5rem;
@@ -55,5 +57,11 @@
   &:hover &__text {
     top: 50%;
     opacity: 1;
+  }
+
+  h1 {
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
   }
 }

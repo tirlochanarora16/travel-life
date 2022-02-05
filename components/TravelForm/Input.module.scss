@@ -9,6 +9,10 @@
   transition: all 0.3s;
   overflow: hidden;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   @include respond(phone) {
     max-width: 100%;
   }
