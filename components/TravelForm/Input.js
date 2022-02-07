@@ -1,25 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { FormContext } from "../../context/FormContext";
 
 import styles from "./Input.module.scss";
 
 const Input = (props) => {
-  const { formInfo, setFormInfo } = useContext(FormContext);
+  // getting variables and functions form the FormContext to manipulate the state
+  const { formInfo, setFormInfo, setError } = useContext(FormContext);
 
-  const inputChnageHandler = (event) => {
+  const inputChangeHandler = (event) => {
     const inputVariable = event.target.id;
-    
-    setFormInfo(previousFormState => (
-      {...previousFormState, [inputVariable]: event.target.value}
-    ));
+    const inputValue = event.target.value;
+
+    // setting the error if the form is invalid
+    if (inputValue.trim().length === 0) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+
+    // updating the form state by updating the previous state
+    setFormInfo((previousFormState) => ({
+      ...previousFormState,
+      [inputVariable]: inputValue,
+    }));
   };
+
   return (
     <div className={styles["user-input"]}>
       <input
         type={props.type}
         id={props.id}
         placeholder={props.placeholder}
-        onChange={inputChnageHandler}
+        onChange={inputChangeHandler}
         value={formInfo[props.id]}
         required
       />

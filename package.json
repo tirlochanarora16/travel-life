@@ -8,9 +8,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
     "mapbox-gl": "^2.6.1",
     "next": "^12.0.10",
     "next-images": "^1.8.4",
+    "nodemailer": "^6.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-map-gl": "^6.1.18",
@@ -19,5 +21,13 @@
   "devDependencies": {
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "last 3 safari version"
+    ]
   }
 }

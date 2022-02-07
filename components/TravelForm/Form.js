@@ -9,16 +9,27 @@ import { countries } from "../../utils/countriesList";
 import styles from "./Form.module.scss";
 
 const Form = (props) => {
-  const { currentFormPage, incrementFormPage, decrementFormPage } =
-    useContext(FormContext);
+  // importing variables and functions from the FormContext
+  const {
+    currentFormPage,
+    incrementFormPage,
+    decrementFormPage,
+    formSubmitHandler,
+    isLoading,
+    message,
+    error,
+  } = useContext(FormContext);
 
+  // using state to check the width of the screen
   const [width, setWidth] = useState(0);
+
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
 
   return (
     <div
+      // conditional classes to be added to add the form below the header
       className={styles["travel__form"]}
       style={{
         marginTop: props.forHeader && width > 400 ? "-15rem" : "",
@@ -115,21 +126,49 @@ const Form = (props) => {
               options={["Yes", "For some trips", "No thanks"]}
             />
           )}
-          {currentFormPage === 6 && (
+          {currentFormPage === 6 && !isLoading && !message && (
             <p className={styles["travel__form--confirmation"]}>
               Submit the form?
+            </p>
+          )}
+          {currentFormPage === 6 && isLoading && !message && (
+            <p className={styles["travel__form--confirmation"]}>
+              Processing...
+            </p>
+          )}
+          {currentFormPage === 6 && !isLoading && message && (
+            <p
+              className={styles["travel__form--confirmation"]}
+              style={{ letterSpacing: "0" }}
+            >
+              {message}
             </p>
           )}
         </div>
       </form>
       <div className={styles["travel__form--buttons"]}>
         {currentFormPage > 0 && (
-          <button onClick={decrementFormPage}>Back</button>
+          <button onClick={decrementFormPage} type="button">
+            Back
+          </button>
         )}
         {currentFormPage < 6 && (
-          <button onClick={incrementFormPage}>Next</button>
+          <button onClick={incrementFormPage} type="button">
+            Next
+          </button>
         )}
-        {currentFormPage === 6 && <button>Submit</button>}
+        {currentFormPage === 6 && (
+          <button
+            onClick={formSubmitHandler}
+            disabled={error}
+            style={{
+              backgroundColor: error ? "#84868a" : "",
+              cursor: error ? "not-allowed" : "",
+            }}
+          >
+            Submit
+          </button>
+        )}
       </div>
     </div>
   );
