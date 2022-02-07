@@ -21,7 +21,7 @@ const Form = (props) => {
     <div
       className={styles["travel__form"]}
       style={{
-        marginTop: props.forHeader && width > 400 ? "-15rem" : "-9rem",
+        marginTop: props.forHeader && width > 400 ? "-15rem" : "",
         position: props.forHeader ? "relative" : "",
         zIndex: props.forHeader ? "200" : "",
         backgroundColor: props.forHeader ? "#f2f2f2" : "",
