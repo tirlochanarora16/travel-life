@@ -5,6 +5,18 @@
   &__title {
     text-transform: uppercase;
     font-size: 12rem;
+    background-image: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      from($color-main-blue),
+      to($color-main-green)
+    );
+    background-image: -webkit-linear-gradient(
+      right,
+      $color-main-blue,
+      $color-main-green
+    );
     background-image: linear-gradient(
       to left,
       $color-main-blue,
@@ -13,9 +25,17 @@
     background-clip: text;
     color: transparent;
     letter-spacing: 3rem;
-    // padding-right: -3rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
 
