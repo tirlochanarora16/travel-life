@@ -18,6 +18,8 @@ const Form = (props) => {
     isLoading,
     message,
     error,
+    formInfo,
+    setFormInfo,
   } = useContext(FormContext);
 
   // using state to check the width of the screen
@@ -26,6 +28,15 @@ const Form = (props) => {
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
+
+  const inputChangeHandler = (event) => {
+    const targetId = event.target.id;
+    const targetValue = event.target.value;
+
+    setFormInfo((previousState) => {
+      return { ...previousState, [targetId]: targetValue };
+    });
+  };
 
   return (
     <div
@@ -82,6 +93,28 @@ const Form = (props) => {
               label="Budget"
             />
           )}
+          {currentFormPage === 6 && (
+            <div className={styles["duration"]}>
+              <div className={styles["duration__from"]}>
+                <label htmlFor="from">From: </label>
+                <input
+                  type="date"
+                  id="from"
+                  onChange={inputChangeHandler}
+                  value={formInfo["from"]}
+                />
+              </div>
+              <div className={styles["duration__to"]}>
+                <label htmlFor="to">To: </label>
+                <input
+                  type="date"
+                  id="to"
+                  onChange={inputChangeHandler}
+                  value={formInfo["to"]}
+                />
+              </div>
+            </div>
+          )}
         </div>
         <div className={styles["travel__form--row"]}>
           {currentFormPage === 1 && (
@@ -126,17 +159,17 @@ const Form = (props) => {
               options={["Yes", "For some trips", "No thanks"]}
             />
           )}
-          {currentFormPage === 6 && !isLoading && !message && (
+          {currentFormPage === 7 && !isLoading && !message && (
             <p className={styles["travel__form--confirmation"]}>
               Submit the form?
             </p>
           )}
-          {currentFormPage === 6 && isLoading && !message && (
+          {currentFormPage === 7 && isLoading && !message && (
             <p className={styles["travel__form--confirmation"]}>
               Processing...
             </p>
           )}
-          {currentFormPage === 6 && !isLoading && message && (
+          {currentFormPage === 7 && !isLoading && message && (
             <p
               className={styles["travel__form--confirmation"]}
               style={{ letterSpacing: "0" }}
@@ -152,12 +185,12 @@ const Form = (props) => {
             Back
           </button>
         )}
-        {currentFormPage < 6 && (
+        {currentFormPage < 7 && (
           <button onClick={incrementFormPage} type="button">
             Next
           </button>
         )}
-        {currentFormPage === 6 && (
+        {currentFormPage === 7 && !isLoading && !message && (
           <button
             onClick={formSubmitHandler}
             disabled={error}

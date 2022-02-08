@@ -12,6 +12,8 @@ const FormProvider = ({ children }) => {
     email: "",
     mobile: "",
     budget: "",
+    from: "",
+    to: "",
     destination: "United States of America",
     reason: "Leisure & Tourism",
     excrusion: "Snowmobile",
@@ -38,26 +40,44 @@ const FormProvider = ({ children }) => {
 
     console.log("Hello");
 
-    // setIsLoading(true);
+    setIsLoading(true);
 
-    // const request = await fetch("http://localhost:3000/api/form", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-type": "application/json",
-    //   },
-    //   body: JSON.stringify({ formInfo }),
-    // });
+    const request = await fetch("http://localhost:3000/api/form", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ formInfo }),
+    });
 
-    // const response = await request.json();
-    // setIsLoading(false);
+    const response = await request.json();
+    setIsLoading(false);
 
-    // if (response.msg) {
-    //   setMessage(
-    //     "Thanks so much for reaching out. Prepare yourself to awesome holidays ! We'll get back to you very soon."
-    //   );
-    // } else {
-    //   setMessage("Error while sending the inquiry. Please try again");
-    // }
+    if (response.msg) {
+      setMessage(
+        "Thanks so much for reaching out. Prepare yourself to awesome holidays ! We'll get back to you very soon."
+      );
+
+      setFormInfo({
+        name: "",
+        email: "",
+        mobile: "",
+        budget: "",
+        from: "",
+        to: "",
+        destination: "United States of America",
+        reason: "Leisure & Tourism",
+        excrusion: "Snowmobile",
+        guide: "Yes",
+      });
+
+      setTimeout(() => {
+        setCurrentFormPage(0);
+        setMessage("");
+      }, 3000);
+    } else {
+      setMessage("Error while sending the inquiry. Please try again");
+    }
   };
 
   return (

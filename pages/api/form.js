@@ -5,12 +5,22 @@ const submitFormData = (req, res) => {
   sgMail.setApiKey(SEND_GRID_KEY);
 
   const { formInfo } = req.body;
-  const { name, email, mobile, budget, destination, reason, excrusion, guide } =
-    formInfo;
+  const {
+    name,
+    email,
+    mobile,
+    budget,
+    destination,
+    reason,
+    excrusion,
+    guide,
+    from,
+    to,
+  } = formInfo;
 
   if (req.method === "POST") {
     const msg = {
-      to: "", // Change to your recipient
+      to: "tirlochan.arora16@gmail.com", // Change to your recipient
       from: "welcome@travel-life.ml", // Change to your verified sender
       subject: "New Travel Inquiry",
       html: `<ul>
@@ -22,6 +32,8 @@ const submitFormData = (req, res) => {
         <li>Reason: ${reason}</li>
         <li>Excrusion: ${excrusion}</li>
         <li>Guide: ${guide}</li>
+        <li>From: ${from}</li>
+        <li>To: ${to}</li>
       </ul>`,
     };
     sgMail

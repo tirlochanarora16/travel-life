@@ -106,3 +106,34 @@
     }
   }
 }
+
+.duration {
+  padding: 1rem;
+
+  width: 80%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  // border: 1px solid red;
+
+  label {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+
+  input {
+    padding: 3rem;
+    border-radius: 6rem;
+    border: none;
+    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.2);
+  }
+
+  &__from {
+    padding: 1rem;
+  }
+
+  &__to {
+    padding: 1rem;
+  }
+}
