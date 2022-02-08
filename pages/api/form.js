@@ -20,7 +20,7 @@ const submitFormData = (req, res) => {
 
   if (req.method === "POST") {
     const msg = {
-      to: "tirlochan.arora16@gmail.com", // Change to your recipient
+      to: "welcome@travel-life.ml", // Change to your recipient
       from: "welcome@travel-life.ml", // Change to your verified sender
       subject: "New Travel Inquiry",
       html: `<ul>
