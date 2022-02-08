@@ -42,7 +42,7 @@ const FormProvider = ({ children }) => {
 
     setIsLoading(true);
 
-    const request = await fetch("http://localhost:3000/api/form", {
+    const request = await fetch("https://travel-life.vercel.app/api/form", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
