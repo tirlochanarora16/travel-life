@@ -25,6 +25,11 @@
         margin: 3rem 5rem 0 5rem;
         letter-spacing: 0rem;
         font-size: 7rem;
+
+        @include respond(phone) {
+          margin: 3rem;
+          font-size: 6rem;
+        }
       }
 
       p {
@@ -115,7 +120,14 @@
 
   display: flex;
   justify-content: space-between;
-  // border: 1px solid red;
+
+  @include respond(phone) {
+    width: 100%;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   label {
     font-size: 3rem;
@@ -127,6 +139,10 @@
     border-radius: 6rem;
     border: none;
     box-shadow: 0 1rem 1.5rem rgba($color-black, 0.2);
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
   }
 
   &__from {
@@ -135,5 +151,11 @@
 
   &__to {
     padding: 1rem;
+
+    input {
+      @include respond(phone) {
+        margin-left: 4rem;
+      }
+    }
   }
 }
