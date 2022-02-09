@@ -140,6 +140,10 @@
       @media only screen and (min-width: 100em) {
         width: 90%;
       }
+
+      @include respond(big-desktop) {
+        width: 80%;
+      }
     }
 
     &-box {
@@ -167,16 +171,21 @@
 
       &-2 {
         @media only screen and (min-width: 100em) {
-          margin-right: 10rem;
+          margin-right: 1rem;
         }
         p {
           font-style: italic;
           font-size: 3rem;
           margin: 0 3rem;
 
+          @include respond(tab-land) {
+            font-size: 3rem;
+            margin-right: 0;
+          }
+
           @media only screen and (min-width: 100em) {
             margin-right: 10rem;
-            margin-left: -25rem;
+            margin-left: -8rem;
           }
         }
 
@@ -213,8 +222,16 @@
       }
 
       &-4 {
+        @include respond(tab-port) {
+          margin-left: 1rem;
+        }
+
+        @include respond(tab-land) {
+          margin-left: 1rem;
+        }
+
         @media only screen and (min-width: 100em) {
-          margin-left: -28rem;
+          margin-left: -8rem;
         }
         ul {
           list-style: none;
