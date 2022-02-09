@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 20 version
+*/
+
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
@@ -6,7 +13,9 @@
     width: 50%;
     margin: 4rem auto;
     padding: 2rem;
+    -webkit-border-radius: 6rem;
     border-radius: 6rem;
+    -webkit-box-shadow: 0 0.2rem 2rem rgba(#000, 0.5);
     box-shadow: 0 0.2rem 2rem rgba(#000, 0.5);
     background-color: #f2f2f2c4;
 
@@ -41,6 +50,10 @@
 
     form {
       @include respond(phone) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
       }
     }
@@ -49,6 +62,9 @@
       width: 100%;
       margin: 1rem auto;
       padding: 2rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
 
       @include respond(phone) {
@@ -56,10 +72,14 @@
       }
 
       button {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
         flex: 0 0 40%;
         padding: 3rem;
         text-transform: uppercase;
         letter-spacing: 1.5rem;
+        -webkit-border-radius: 10rem;
         border-radius: 10rem;
         border: none;
         display: block;
@@ -68,7 +88,10 @@
         background-color: $color-main-blue;
         color: $color-white;
         cursor: pointer;
+        -webkit-box-shadow: 0 0.2rem 1.5rem rgba(#413e3e, 0.75);
         box-shadow: 0 0.2rem 1.5rem rgba(#413e3e, 0.75);
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
 
         @include respond(tab-port) {
@@ -84,16 +107,23 @@
         }
 
         &:hover {
+          -webkit-transform: translateY(-1rem);
+          -ms-transform: translateY(-1rem);
           transform: translateY(-1rem);
         }
 
         &:active {
+          -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
           transform: translateY(0);
         }
       }
     }
     &--row {
       max-width: 100%;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
       flex: 1;
       margin: auto;
 
@@ -118,14 +148,33 @@
   width: 80%;
   margin: auto;
 
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   @include respond(phone) {
     width: 100%;
     padding: 0.5rem;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -136,8 +185,10 @@
 
   input {
     padding: 3rem;
+    -webkit-border-radius: 6rem;
     border-radius: 6rem;
     border: none;
+    -webkit-box-shadow: 0 1rem 1.5rem rgba($color-black, 0.2);
     box-shadow: 0 1rem 1.5rem rgba($color-black, 0.2);
 
     @include respond(phone) {

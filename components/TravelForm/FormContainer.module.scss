@@ -1,9 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 20 version
+*/
+
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
 .travel {
   margin-top: 16rem;
   padding: 10rem;
+  background-image: -webkit-gradient(
+      linear,
+      right top,
+      left bottom,
+      from(rgba($color-primary-blue, 0.8)),
+      to(rgba($color-primary-blue-2, 0.8))
+    ),
+    url("../../images/places/kenya.jpg");
+  background-image: -o-linear-gradient(
+      right top,
+      rgba($color-primary-blue, 0.8),
+      rgba($color-primary-blue-2, 0.8)
+    ),
+    url("../../images/places/kenya.jpg");
   background-image: linear-gradient(
       to left bottom,
       rgba($color-primary-blue, 0.8),
@@ -13,18 +34,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  -webkit-border-top-left-radius: 30%;
   border-top-left-radius: 30%;
+  -webkit-border-top-right-radius: 30%;
   border-top-right-radius: 30%;
 
   @include respond(tab-port) {
+    -webkit-border-top-left-radius: 10%;
     border-top-left-radius: 10%;
+    -webkit-border-top-right-radius: 10%;
     border-top-right-radius: 10%;
   }
 
   @include respond(phone) {
     padding: 3rem;
     margin-top: 20rem;
+    -webkit-border-top-left-radius: 0;
     border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
     border-top-right-radius: 0;
   }
 

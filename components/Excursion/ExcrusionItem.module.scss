@@ -3,6 +3,7 @@
 
 .exrusion__item {
   width: 100%;
+  -webkit-border-radius: 8rem;
   border-radius: 8rem;
   height: 100rem;
   margin-right: 5rem;
@@ -10,7 +11,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  -webkit-box-shadow: 0 0.2rem 2rem rgba(#413e3e, 0.75);
   box-shadow: 0 0.2rem 2rem rgba(#413e3e, 0.75);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 
   @include respond(tab-port) {
@@ -27,6 +31,8 @@
   }
 
   &:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
 
@@ -43,8 +49,12 @@
     left: 50%;
     width: 100%;
     opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: $color-white;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 
     @include respond(tab-port) {

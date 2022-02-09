@@ -3,21 +3,29 @@
 
 .place {
   position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   overflow-y: hidden;
+  -webkit-border-radius: 6rem;
   border-radius: 6rem;
   padding: 1.5rem;
 
   &__img {
     display: block;
     margin: auto;
+    -webkit-border-radius: 6rem;
     border-radius: 6rem;
     height: 80rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     overflow: hidden;
+    -webkit-box-shadow: 0 0.2rem 1.5rem rgba(#000, 0.75);
     box-shadow: 0 0.2rem 1.5rem rgba(#000, 0.75);
 
     @include respond(tab-port) {
@@ -44,13 +52,18 @@
     left: 50%;
     width: 100%;
     text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: $color-white;
     opacity: 0;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     transition: all 0.4s;
   }
 
   &:hover &__img {
+    -webkit-filter: blur(1rem);
     filter: blur(1rem);
   }
 

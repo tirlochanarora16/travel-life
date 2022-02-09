@@ -7,18 +7,29 @@
 
 .map {
   margin-top: 15rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 
   &__container {
+    -webkit-border-radius: 10rem;
     border-radius: 10rem;
     overflow: hidden;
-    box-shadow: 0 .2rem 1.5rem rgba(#413e3e, .75);
+    -webkit-box-shadow: 0 0.2rem 1.5rem rgba(#413e3e, 0.75);
+    box-shadow: 0 0.2rem 1.5rem rgba(#413e3e, 0.75);
 
     @include respond(phone) {
+      -webkit-border-radius: 4rem;
       border-radius: 4rem;
     }
-
   }
 }
