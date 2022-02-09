@@ -60,7 +60,7 @@ const Footer = () => {
                 src={devices}
                 alt="Devices Images"
                 width={64}
-                height={44}
+                height={46}
               />
             </div>
             <div className={styles["footer__legal-box-2"]}>
