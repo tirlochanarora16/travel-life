@@ -59,8 +59,8 @@ const Footer = () => {
               <Image
                 src={devices}
                 alt="Devices Images"
-                width={80}
-                height={50}
+                width={64}
+                height={44}
               />
             </div>
             <div className={styles["footer__legal-box-2"]}>
@@ -74,8 +74,8 @@ const Footer = () => {
               <Image
                 src={logo}
                 alt="Go Make Apps Logo"
-                width={50}
-                height={80}
+                width={65}
+                height={88}
               />
             </div>
             <div className={styles["footer__legal-box-4"]}>
