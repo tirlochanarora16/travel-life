@@ -66,8 +66,8 @@ const Footer = () => {
             <div className={styles["footer__legal-box-2"]}>
               <p>
                 To offer you a better reading comfort, from your PC, Mac, tablet
-                or smartphone, our websites automatically adapts to different
-                screen sizes. Welcome to a responsive website.
+                or smartphone, our websites automatically <br /> adapts to
+                different screen sizes. Welcome to a responsive website.
               </p>
             </div>
             <div className={styles["footer__legal-box-3"]}>
