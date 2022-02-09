@@ -136,6 +136,10 @@
       box-shadow: 0 0.2rem 0.75rem rgba(#413e3e, 0.75);
 
       background-color: $color-white;
+
+      @media only screen and (min-width: 100em) {
+        width: 65%;
+      }
     }
 
     &-box {
@@ -165,7 +169,7 @@
         p {
           font-style: italic;
           font-size: 3rem;
-          margin: 0 4rem;
+          margin: 0 3rem;
         }
 
         @include respond(tab-port) {
