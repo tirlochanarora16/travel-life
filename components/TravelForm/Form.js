@@ -48,6 +48,7 @@ const Form = (props) => {
         zIndex: props.forHeader ? "200" : "",
         backgroundColor: props.forHeader ? "#f2f2f2" : "",
       }}
+      id={props.forHeader ? "book-now" : ""}
     >
       <form>
         {props.forHeader && (

@@ -1,14 +1,14 @@
-import Image from "next/image";
-import { useState } from "react";
-
-import kenyaImg from "../../images/places/kenya.jpg";
+import { useRouter } from "next/router";
 
 import styles from "./PlaceItem.module.scss";
 
 const PlaceItem = (props) => {
+  const router = useRouter();
+
+  const navigateHandler = () => router.push("/#book-now");
 
   return (
-    <div className={styles["place"]}>
+    <div className={styles["place"]} onClick={navigateHandler}>
       <div
         className={styles["place__img"]}
         style={{
