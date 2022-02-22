@@ -5,13 +5,13 @@
   &__title {
     text-transform: uppercase;
     font-size: 12rem;
-    background-image: -webkit-gradient(
-      linear,
-      right top,
-      left top,
-      from($color-main-blue),
-      to($color-main-green)
-    );
+    // background-image: -webkit-gradient(
+    //   linear,
+    //   right top,
+    //   left top,
+    //   from($color-main-blue),
+    //   to($color-main-green)
+    // );
     background-image: -webkit-linear-gradient(
       right,
       $color-main-blue,
@@ -25,6 +25,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    -webkit-text-fill-color: transparent;
     letter-spacing: 3rem;
     display: -webkit-box;
     display: -webkit-flex;
