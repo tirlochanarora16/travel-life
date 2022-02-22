@@ -45,6 +45,7 @@
     @include respond(phone) {
       letter-spacing: 2rem;
       font-size: 5.4rem;
+      display: inline-block;
     }
   }
 }
