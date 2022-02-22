@@ -13,7 +13,7 @@
     //   to($color-main-green)
     // );
     background-image: -webkit-linear-gradient(
-      right,
+      to left,
       $color-main-blue,
       $color-main-green
     );
@@ -25,7 +25,8 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
+    // -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
     letter-spacing: 3rem;
     display: -webkit-box;
     display: -webkit-flex;
