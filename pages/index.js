@@ -15,7 +15,10 @@ export default function Home(props) {
     <Fragment>
       <Head>
         <title>Travel Life</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        ></meta>
         {/* <meta name="viewport" content="user-scalable=0;"/> */}
         <link rel="icon" href="/icon.png" type="image/png" />
       </Head>
